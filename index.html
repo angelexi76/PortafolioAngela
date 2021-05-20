@@ -511,9 +511,14 @@
                 </div>
             </section> -->
             <!-- section close -->
-
+            
+           
+            
+            
+   
             <!-- section begin -->
-           <!--  <section id="section-contact" class="no-bg">
+            <form id="form" action="" class="form"></form>
+           <section id="section-contact" class="no-bg">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center">
@@ -523,20 +528,23 @@
 
                         <div class="col-md-8 col-md-offset-2 wow fadeInUp">
                             <div class="row">
-                                <form name="contactForm" id='contact_form' class="s2" method="post" action='email.php'>
+                                <form name="contactForm" id="form" class="s2"action="">
                                     <div class="col-md-6">
                                         <div class="field-set">
-                                            <input type='text' name='name' id='name' class="form-control" placeholder="Su Nombre">
+                                            <label for="name">Nombre</label>
+                                            <input type="text" name="name" id="name" placeholder="Su Nombre">
                                             <div class="line-fx"></div>
                                         </div>
 
                                         <div class="field-set">
-                                            <input type='text' name='email' id='email' class="form-control" placeholder="Su Email">
+                                            
+                                            <label for="email">Correo electrónico</label>
+                                            <input type="text" name="email" id="email"  placeholder="Su Email">
                                             <div class="line-fx"></div>
                                         </div>
 
                                         <div class="field-set">
-                                            <input type='text' name='phone' id='phone' class="form-control" placeholder="Su Numero">
+                                            <input type="text" name="phone" id="phone" placeholder="Su Numero">
                                             <div class="line-fx"></div>
                                            
                                         </div>
@@ -544,40 +552,32 @@
 
                                     <div class="col-md-6">
                                         <div class="field-set">
-                                            <textarea name='message' id='message' class="form-control" placeholder="Su Mensaje"></textarea>
+                                            <label for="message">Mensaje</label>
+                                            <textarea id="message" name="message" placeholder="Su Mensaje"></textarea>
+                                            
                                             <div class="line-fx"></div>
                                         </div>
-                                        <a href="mailto:angelasanchezbarbosa@gmail.com" id="contac"></a>
+                                        
                                     </div>
 
                                     <div class="spacer-single"></div>
 
                                     <div class="col-md-12 text-center">
                                         <div id='submit'>
-                                            <input type='submit' id='send_message' value='Enviar' class="btn btn-custom color-2">
+                                            <input type='submit' id='message' value='Enviar' class="btn btn-custom color-2">
                                         </div>
+                                        <a href="mailto:angelasanchezbarbosa@gmail.com" id="contac"></a>
+
                                         <div id='mail_success' class='success'>se envio su mensaje</div>
                                         <div id='mail_fail' class='error'>ocurrrio un error</div>
                                     </div>
                                 </form>
-                            </div> -->
-                            <section class="contact">
-                                <div class="u-wrapper">
-                                  <div class="contact-content">
+                            </div> 
+                           
                             
-                                    <form id="form" action="" class="form">
-                                      <h3 class="tag"><span>CONTACTEME</span></h3>
-                                      <label for="name">Nombre Completo <span>*</span></label>
-                                      <input name="name" required type="text" id="name" placeholder="nombre">
-                                      <label for="email">Correo electrónico <span>*</span></label>
-                                      <input name="email" type="text" id="email" required placeholder="correo">
-                                      <label for="message">Mensaje</label>
-                                      <textarea id="message" name="message" id="" cols="30" rows="10"></textarea>
-                                      <button type="submit" class="btn primary full">enviar mensaje</button>
-                                    </form>
-                                    <a href="mailto:angelasanchezbarbosa@gmail.com" id="contac"></a>
-                                  </div>
-                                </div>
+                                    
+                                     
+                                    
 
                             <div class="spacer-double"></div>
 
@@ -678,7 +678,7 @@
     <script src="js/designesia.js"></script>
 
     <script>
-         const $form = document.querySelector('#contact_form')
+         const $form = document.querySelector('form')
          const $buttonMailto = document.querySelector('#contac')
 
         $form.addEventListener('submit',handleSubmit)
