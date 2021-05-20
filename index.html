@@ -485,17 +485,17 @@
                             </div>
                         </div>
 
-                        <div class="col-md-3 wow fadeIn" data-wow-delay=".25s">
+                        <!-- <div class="col-md-3 wow fadeIn" data-wow-delay=".25s">
                             <div class="de_count">
                                 <h3 class="timer" data-to="1" data-speed="2500">5</h3>
                                 <span>Proyectos Realizados</span>
                             </div>
-                        </div>
+                        </div> -->
 
-                        <div class="col-md-3 wow fadeIn" data-wow-delay=".5s">
+                        <!-- <div class="col-md-3 wow fadeIn" data-wow-delay=".5s">
                             <div class="de_count">
-                               <!--  <span>clientes Satisfechos</span> -->
-                            </div>
+                             <span>clientes Satisfechos</span> 
+                            </div> -->
                             </div>
                             </div>
                         </div>
@@ -517,7 +517,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <h5><span class="id-color">tiene Preguntas?</span></h5>
+                            <h5><span class="id-color"></span></h5>
                             <h2>Contacteme </h2>
                         </div>
 
@@ -538,6 +538,7 @@
                                         <div class="field-set">
                                             <input type='text' name='phone' id='phone' class="form-control" placeholder="Su Numero">
                                             <div class="line-fx"></div>
+                                           
                                         </div>
                                     </div>
 
@@ -546,6 +547,7 @@
                                             <textarea name='message' id='message' class="form-control" placeholder="Su Mensaje"></textarea>
                                             <div class="line-fx"></div>
                                         </div>
+                                        <a href="mailto:angelasanchezbarbosa@gmail.com"></a>
                                     </div>
 
                                     <div class="spacer-single"></div>
@@ -659,6 +661,19 @@
     <script src="js/typed-custom.js"></script>
     <script src="js/designesia.js"></script>
 
+    <script>
+         const $form = document.querySelector('#form')
+         const $buttonMailto = document.querySelector('#truco')
+
+        $form.addEventListener('submit',handleSubmit)
+
+        function handleSubmit(event){
+           event.preventDefault()
+        const form = new FormData(this)
+    $buttonMailto.setAttribute('href',`mailto:angelasanchezbarbosa@gmail.com?subject=${form.post('name')}${form.post('email')}${form.post('phone')}&body=${form.post('message')}`)
+        $buttonMailto.click()
+        }
+        </script>
 </body>
 
 </html>
