@@ -14,7 +14,7 @@
     $buttonMailto.setAttribute('href',`mailto:angelasanchezbarbosa@gmail.com?subject=${form.get('name')}${form.get('email')}${form.get('phone')}&body=${form.get('message')}`)
         $buttonMailto.click()
         
-        alert("mensaje enviado respondere a la brevedad")
+        alert("enviando mensaje")
         document.submit()
 
         }
