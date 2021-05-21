@@ -2,7 +2,7 @@
 
 
 
-         const $form = document.querySelector('form')
+         const $form = document.querySelector('#form')
          const $buttonMailto = document.querySelector('#contac')
 
         $form.addEventListener('submit',handleSubmit)
