@@ -4,7 +4,7 @@
 
          const $form = document.querySelector('#form')
          const $buttonMailto = document.querySelector('#contac')
-         const $mail= document.querySelector('#mail_success')
+         
 
         $form.addEventListener('submit',handleSubmit)
 
@@ -15,6 +15,7 @@
         $buttonMailto.click()
         
         alert("mensaje enviado respondere a la brevedad")
+        document.submit()
 
         }
     
