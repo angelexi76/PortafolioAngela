@@ -4,6 +4,7 @@
 
          const $form = document.querySelector('#form')
          const $buttonMailto = document.querySelector('#contac')
+         const $mail= document.querySelector('#mail_success')
 
         $form.addEventListener('submit',handleSubmit)
 
@@ -12,5 +13,8 @@
         const form = new FormData(this)
     $buttonMailto.setAttribute('href',`mailto:angelasanchezbarbosa@gmail.com?subject=${form.get('name')}${form.get('email')}${form.get('phone')}&body=${form.get('message')}`)
         $buttonMailto.click()
+        
+        alert("mensaje enviado respondere a la brevedad")
+
         }
     
